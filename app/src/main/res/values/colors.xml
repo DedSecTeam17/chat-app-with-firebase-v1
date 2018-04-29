@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#22A7F0</color>
+    <color name="colorPrimaryDark">#22313F
+    </color>
+    <color name="colorAccent">#19B5FE</color>
+    <color name="backgroun">#3498DB</color>
+    <color name="reg_color">#6BB9F0</color>
+
+
+
+    <color name="have_account">#674172</color>
+    <color name="txt_color">#fff</color>
+    <color name="stroke">#DCC6E0</color>
+</resources>
