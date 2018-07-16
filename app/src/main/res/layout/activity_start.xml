@@ -1,43 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_gradinet"
+    android:background="@color/regester_background_color"
+
     tools:context="com.example.mohamed.chatapp.StartActivity">
+
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="20sp"
-            android:textColor="@color/txt_color"
-            android:text="@string/start_activity" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/create_account_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/register_btn"
             android:background="@drawable/btn_style"
-            android:textColor="@color/txt_color"
-            android:layout_margin="20dp"
-            android:text="@string/register_btn" />
+            android:layout_margin="10dp"
+            android:textColor="@color/txt_color" />
 
         <Button
             android:id="@+id/have_account"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/have_Account"
             android:background="@drawable/btn_style"
-            android:textColor="@color/txt_color"
-            android:layout_margin="20dp"
-            android:text="@string/have_Account" />
+            android:layout_margin="10dp"
+            android:textColor="@color/txt_color" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="139dp"
+        android:fontFamily="casual"
+        android:text="SUSTCHAT"
+        android:textColor="@color/txt_color"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:text="we make it easy"
+        android:textColor="@color/txt_color" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="79dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="65dp"
+        android:layout_toEndOf="@+id/textView8"
+        app:srcCompat="@drawable/chat_logo" />
 
 
 </RelativeLayout>

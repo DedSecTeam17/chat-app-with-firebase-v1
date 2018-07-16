@@ -55,7 +55,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         setSupportActionBar(mToolBar);
 
-        getSupportActionBar().setTitle("Register");
+        getSupportActionBar().setTitle("انشاء حساب");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         startRegestration.setOnClickListener(new View.OnClickListener() {

@@ -122,7 +122,7 @@ usersList=new ArrayList<>();
             mDataOnline.child("online").setValue(true);
             FirebaseRecyclerAdapter<Users, viewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Users, viewHolder>(
                     Users.class,
-                    R.layout.all_users_row,
+                    R.layout.users_row,
                     viewHolder.class,
                     mUserDataBase
             ) {

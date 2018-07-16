@@ -2,6 +2,7 @@ package com.example.mohamed.chatapp;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -22,6 +24,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.iid.FirebaseInstanceId;
 
+import java.io.BufferedReader;
+
 public class LoginActivity extends AppCompatActivity {
 
 
@@ -32,6 +36,12 @@ public class LoginActivity extends AppCompatActivity {
 
     private ProgressDialog mProgressBar;
     private DatabaseReference mDataRef;
+    private Toolbar mToolBar;
+
+//    Validator TextView
+
+    private TextView email_validator;
+    private TextView password_validator;
 
 
     @Override
@@ -42,8 +52,19 @@ public class LoginActivity extends AppCompatActivity {
         email = (EditText) findViewById(R.id.log_email);
         Password = (EditText) findViewById(R.id.log_password);
         startlogin = (Button) findViewById(R.id.Login_btn);
+//        tool bar
+        mToolBar = (Toolbar) findViewById(R.id.login_tool_bar);
+        setSupportActionBar(mToolBar);
+        getSupportActionBar().setTitle("تسجيل الدخول");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mProgressBar = new ProgressDialog(this);
+
+//        validator are
+
+        email_validator=(TextView) findViewById(R.id.email_validator);
+        password_validator=(TextView) findViewById(R.id.password_validator);
+
 
 
 
@@ -61,6 +82,10 @@ public class LoginActivity extends AppCompatActivity {
                     regesterUser(_email, _password);
                 } else {
                     mProgressBar.dismiss();
+                    email_validator.setTextColor(getResources().getColor(R.color.error));
+                    password_validator.setTextColor(getResources().getColor(R.color.error));
+                    email_validator.setText("الرجاء ادخال بريد اليكتروني صحيح");
+                    password_validator.setText("الرجاء ادخال كلمه سر صحيحه");
                     Toast.makeText(getBaseContext(), "empty Field not allowed here", Toast.LENGTH_LONG).show();
                 }
 
@@ -70,6 +95,14 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void regesterUser(String email, String password) {
+
+
+
+
+
+
+
+
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -94,4 +127,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
+
+
 }

@@ -12,4 +12,8 @@
     <color name="have_account">#674172</color>
     <color name="txt_color">#fff</color>
     <color name="stroke">#DCC6E0</color>
+    <color name="regester_background_color">#34495E</color>
+    <color name="blue_text">#4B77BE</color>
+    <color name="error" >#F2784B</color>
+    <color name="super_gry">#2C3E50</color>
 </resources>

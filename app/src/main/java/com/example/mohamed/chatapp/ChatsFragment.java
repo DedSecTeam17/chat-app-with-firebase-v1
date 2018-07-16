@@ -110,7 +110,10 @@ public class ChatsFragment extends Fragment {
         mFirebaseAuth=FirebaseAuth.getInstance();
 
         mUserInformation=FirebaseDatabase.getInstance().getReference().child("users");
-        mMessages=FirebaseDatabase.getInstance().getReference().child("messages").child(mFirebaseAuth.getCurrentUser().getUid());
+        if (mFirebaseAuth.getCurrentUser()!=null){
+            mMessages=FirebaseDatabase.getInstance().getReference().child("messages").child(mFirebaseAuth.getCurrentUser().getUid());
+        }
+
         list=new ArrayList<>();
 
         mUserInformation.keepSynced(true);
@@ -209,7 +212,7 @@ public class ChatsFragment extends Fragment {
 
                             TimeSince timeSince=new TimeSince();
                          String time=   timeSince.getTimeAgo(data,viewHolder.mainv.getContext());
-                            Toast.makeText(getActivity(),from,Toast.LENGTH_LONG).show();
+//                            Toast.makeText(getActivity(),from,Toast.LENGTH_LONG).show();
                             viewHolder.bindDate(from);
                             viewHolder.bindTime(time);
 

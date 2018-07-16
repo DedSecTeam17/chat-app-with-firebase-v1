@@ -64,7 +64,8 @@
         android:layout_alignBottom="@+id/user_display_name"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="8dp"
-        android:text="TextView" />
+        android:text="TextView"
+        android:visibility="gone" />
 
 
 </RelativeLayout>

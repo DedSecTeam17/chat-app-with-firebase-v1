@@ -57,5 +57,4 @@
         android:visibility="visible"
         app:srcCompat="@drawable/avator" />
 
-
 </RelativeLayout>
