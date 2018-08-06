@@ -50,7 +50,7 @@ public class UsersActivity extends AppCompatActivity {
         setContentView(R.layout.activity_users);
         mToolBar = (Toolbar) findViewById(R.id.users_tool_Bar);
         setSupportActionBar(mToolBar);
-        getSupportActionBar().setTitle("All Users");
+        getSupportActionBar().setTitle("كل المستخدمين");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Slide slide = new Slide();

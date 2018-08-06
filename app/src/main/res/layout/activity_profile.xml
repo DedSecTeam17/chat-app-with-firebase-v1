@@ -140,7 +140,6 @@
             android:background="@drawable/btn_style"
             android:text="@string/profile_send_request_btn"
             android:textColor="@color/txt_color" />
-
         <Button
             android:id="@+id/profile_decline_request"
             android:layout_width="wrap_content"
@@ -151,6 +150,4 @@
             android:text="@string/cancel_friend_request"
             android:textColor="@color/txt_color" />
     </LinearLayout>
-
-
 </RelativeLayout>

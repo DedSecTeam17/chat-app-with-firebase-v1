@@ -48,9 +48,8 @@ public class StatusActivity extends AppCompatActivity {
 
         setSupportActionBar(mToolBar);
 
-        getSupportActionBar().setTitle("Register");
+        getSupportActionBar().setTitle("تحديث الحاله");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         mNewStatus.setText(name);
         mSaveStatus.setOnClickListener(new View.OnClickListener() {
             @Override

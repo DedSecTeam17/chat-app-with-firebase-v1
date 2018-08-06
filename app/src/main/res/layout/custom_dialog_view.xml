@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:background="@color/regester_background_color"
     android:layout_height="match_parent">
 
     <EditText
@@ -12,7 +11,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="88dp"
         android:padding="11dp"
-        android:textColor="@color/backgroun"
+        android:textColor="@color/super_gry"
         android:background="@drawable/input_style"
         android:ems="10"
         android:inputType="textPersonName"

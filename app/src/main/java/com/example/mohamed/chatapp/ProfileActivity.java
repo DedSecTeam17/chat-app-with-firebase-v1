@@ -59,7 +59,7 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
         mToolBar = (Toolbar) findViewById(R.id.pro_tool);
         setSupportActionBar(mToolBar);
-        getSupportActionBar().setTitle("Profile ");
+        getSupportActionBar().setTitle("البروفايل ");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Bundle bundle = getIntent().getExtras();

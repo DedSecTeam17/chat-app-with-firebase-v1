@@ -150,7 +150,7 @@ public class ChatsFragment extends Fragment {
                         @Override
                         public void onClick(View v) {
 
-                            CharSequence [] option=new CharSequence[]{"view profile","send message"};
+                            CharSequence [] option=new CharSequence[]{"عرض البروفايل","ارسال رساله"};
 
                             AlertDialog.Builder option_shower=new AlertDialog.Builder(getContext());
                             option_shower.setTitle("choose an option");

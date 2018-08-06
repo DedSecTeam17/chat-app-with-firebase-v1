@@ -61,6 +61,7 @@ public class SittingActivity extends AppCompatActivity {
     private EditText user_name;
     private View view;
     private  TextView user_status;
+    private LayoutInflater layoutInflater;
 //    private  DatabaseReference mFireBaseChangeName;
 
 
@@ -83,16 +84,13 @@ public class SittingActivity extends AppCompatActivity {
 
 
 
-        LayoutInflater layoutInflater=getLayoutInflater();
 
-        view=layoutInflater.inflate(R.layout.custom_dialog_view,null);
-        user_name=(EditText)view.findViewById(R.id.name_text);
 
 
 
         setSupportActionBar(mToolBar);
 
-        getSupportActionBar().setTitle("Register");
+        getSupportActionBar().setTitle("البروفايل");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
@@ -107,7 +105,10 @@ public class SittingActivity extends AppCompatActivity {
                 intoActivity(StatusActivity.class, user_name.getText().toString());
             }
         });
+        layoutInflater=getLayoutInflater();
 
+        view=layoutInflater.inflate(R.layout.custom_dialog_view,null);
+        user_name=view.findViewById(R.id.name_text);
 
 //        mChangeStaus.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -123,9 +124,12 @@ public class SittingActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                final android.app.AlertDialog.Builder alert = new android.app.AlertDialog.Builder(SittingActivity.this);
-                final android.app.AlertDialog alertd = alert.create();
+
+
+                AlertDialog.Builder alert = new AlertDialog.Builder(SittingActivity.this);
+
                 alert.setView(view);
+
                 alert.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -141,19 +145,16 @@ public class SittingActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         String name=user_name.getText().toString().trim();
                         Toast.makeText(getBaseContext(),name,Toast.LENGTH_LONG).show();
-                        
                         mDataBaseRef.child("name").setValue(name);
-
-
-
-
+                        Intent intent=new Intent(getApplicationContext(),SittingActivity.class);
+                        startActivity(intent);
                     }
                 });
 
-                alert.setTitle("change your name");
-                alert.setCancelable(false);
+                AlertDialog dialog = alert.create();
+                dialog.show();
 
-                alert.show();
+
 
 
             }

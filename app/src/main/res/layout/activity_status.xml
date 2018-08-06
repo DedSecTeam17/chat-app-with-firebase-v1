@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_gradinet"
     tools:context="com.example.mohamed.chatapp.StatusActivity">
 
 
@@ -20,11 +19,10 @@
         android:layout_marginTop="101dp"
         android:background="@drawable/input_style"
         android:ems="10"
-        android:hint="@string/email_hint"
         android:layout_margin="20dp"
         android:inputType="textEmailAddress"
         android:padding="11dp"
-        android:textColor="@color/txt_color"
+        android:textColor="@color/super_gry"
         android:textColorHint="@color/txt_color" />
 
     <Button

@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.example.mohamed.chatapp.MainActivity">
 
-
     <include
         android:id="@+id/main_toolbar"
         layout="@layout/main_tool_bar"

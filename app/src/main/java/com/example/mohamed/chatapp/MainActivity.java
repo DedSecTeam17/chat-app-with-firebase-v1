@@ -30,12 +30,12 @@ public class MainActivity extends AppCompatActivity implements FriendsFragment.O
         setContentView(R.layout.activity_main);
         mToolBar = (android.support.v7.widget.Toolbar) findViewById(R.id.main_toolbar);
         setSupportActionBar(mToolBar);
-        getSupportActionBar().setTitle("Chat App");
+        getSupportActionBar().setTitle("SustApp");
         mAuth = FirebaseAuth.getInstance();
         final TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
-        tabLayout.addTab(tabLayout.newTab().setText("Request"));
-        tabLayout.addTab(tabLayout.newTab().setText("chat"));
-        tabLayout.addTab(tabLayout.newTab().setText("Friend"));
+        tabLayout.addTab(tabLayout.newTab().setText("الطلبات"));
+        tabLayout.addTab(tabLayout.newTab().setText("الدردشه"));
+        tabLayout.addTab(tabLayout.newTab().setText("الاصدقاء"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
 
@@ -117,12 +117,10 @@ public class MainActivity extends AppCompatActivity implements FriendsFragment.O
         return super.onOptionsItemSelected(item);
 
     }
-
     private void intoActivity(Class x) {
         Intent intoStartActivity = new Intent(getApplicationContext(), x);
         startActivity(intoStartActivity);
     }
-
     @Override
     public void onFragmentInteraction(Uri uri) {
 
